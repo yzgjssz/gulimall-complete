@@ -1,0 +1,78 @@
+# 日志
+logging:
+  level:
+    root: info
+  file:
+    path: ./logs/fleet
+
+# spring配置
+spring:
+  # ES搜索引擎
+  data:
+    elasticsearch:
+      # 注意端口为9300  9300 是 Java 客户端的端口,支持集群之间的通信。9200 是支持 Restful HTTP 的接口
+      cluster-nodes: 111.231.111.150:9300
+      # es的cluster集群名称可以查看服务器安装的集群名称 curl http://192.168.92.130:9200 获取到集群名称
+      cluster-name: docker-cluster
+      repositories:
+        enabled: true
+
+# 分布式文件系统fastDfs配置
+fdfs:
+  # socket连接超时时长
+  soTimeout: 1500
+  # 连接tracker服务器超时时长
+  connectTimeout: 600
+  pool:
+    # 从池中借出的对象的最大数目
+    max-total: 200
+    max-total-per-key: 50
+    # 获取连接时的最大等待毫秒数100
+    max-wait-millis: 5000
+  # 缩略图生成参数，可选
+  thumb-image:
+    width: 150
+    height: 150
+  # 跟踪服务器tracker_server请求地址,支持多个
+  trackerList:
+    - 47.103.5.190:22122
+  #
+  # 存储服务器storage_server访问地址
+  web-server-url: http://47.103.5.190/
+
+
+# 定时任务执行ip地址
+schedule:
+  task:
+    run-host: 127.0.0.1
+tc:
+  adapter:
+    permissions-url: http://adpttest.tceport.com.cn/tcg/httpApi/verifyPermissions
+    decode-url: http://adpttest.tceport.com.cn/tcg/httpApi/decode
+    encrypt-url: http://adpttest.tceport.com.cn/tcg/httpApi/encrypt
+    send-code: TCEPORT_IN_S0006
+    secret-key: 9b4066c1-9949-11e9-b3bb-0242ac110002
+    business-url: http://adpttest.tceport.com.cn/tcg/httpApi/request
+
+# 鉴权
+auth:
+  # 不需要鉴权的路径
+  ignores:
+    - "/"
+    - "/templates/**"
+    - "/imgs/**"
+    - "*.css"
+    - "*.js"
+    - "*.gif"
+    - "*.jpg"
+    - "*.png"
+    - "*.ico"
+    - "/favicon.ico"
+    - "/actuator/**"
+    - "/swagger-ui.html"
+    - "/doc.html"
+    - "/swagger-resources/**"
+    - "/baseMessage/**"
+    - "/service-worker.js"
+    - "/v2/**"
+    - "/webjars/**"

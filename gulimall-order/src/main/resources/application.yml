@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.245.103:3306/gulimall_oms?serverTimezone=GMT%2B8&characterEncoding=utf8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: gulimall-order
+mybatis-plus:
+  mapper-locations: classpath :/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+#      logic-delete-value: 1
+#      logic-not-delete-value: 0
+server:
+  port: 9000
