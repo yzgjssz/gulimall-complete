@@ -40,11 +40,11 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
          */
         List<CategoryEntity> level1Menus = entities.stream().
                 filter(categoryEntity -> categoryEntity.getParentCid() == 0)
-                .map((menu)->{
-                    menu.setChildren(getChildren(menu,entities));
+                .map((menu) -> {
+                    menu.setChildren(getChildren(menu, entities));
                     return menu;
                 })
-                .sorted((menu1,menu2)-> menu1.getSort()==null?0:menu1.getSort()-(menu2.getSort()==null?0:menu2.getSort()))
+                .sorted((menu1, menu2) -> menu1.getSort() == null ? 0 : menu1.getSort() - (menu2.getSort() == null ? 0 : menu2.getSort()))
                 .collect(Collectors.toList());
 
         return level1Menus;
@@ -52,18 +52,19 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
 
     /**
      * 递归查找子菜单
+     *
      * @param root
      * @param all
      * @return
      */
-    private List<CategoryEntity> getChildren(CategoryEntity root, List<CategoryEntity> all){
+    private List<CategoryEntity> getChildren(CategoryEntity root, List<CategoryEntity> all) {
         List<CategoryEntity> children = all.stream()
                 .filter(categoryEntity -> categoryEntity.getParentCid() == root.getCatId())
-                .map((menu)->{
-                    menu.setChildren(getChildren(menu,all));
+                .map((menu) -> {
+                    menu.setChildren(getChildren(menu, all));
                     return menu;
                 })
-                .sorted((menu1,menu2)-> menu1.getSort()==null?0:menu1.getSort()-(menu2.getSort()==null?0:menu2.getSort()))
+                .sorted((menu1, menu2) -> menu1.getSort() == null ? 0 : menu1.getSort() - (menu2.getSort() == null ? 0 : menu2.getSort()))
                 .collect(Collectors.toList());
         return children;
     }

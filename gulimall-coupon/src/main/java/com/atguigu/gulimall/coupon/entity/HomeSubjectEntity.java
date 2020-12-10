@@ -5,11 +5,12 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * 首页专题表【jd首页下面很多专题，每个专题链接新的页面，展示专题商品信息】
- * 
+ *
  * @author yinzg
  * @email yzgjssz@163.com
  * @date 2020-09-02 11:16:06
@@ -17,40 +18,40 @@ import lombok.Data;
 @Data
 @TableName("sms_home_subject")
 public class HomeSubjectEntity implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	/**
-	 * $column.comments
-	 */
-	@TableId
-	private Long id;
-	/**
-	 * $column.comments
-	 */
-	private String name;
-	/**
-	 * $column.comments
-	 */
-	private String title;
-	/**
-	 * $column.comments
-	 */
-	private String subTitle;
-	/**
-	 * $column.comments
-	 */
-	private Integer status;
-	/**
-	 * $column.comments
-	 */
-	private String url;
-	/**
-	 * $column.comments
-	 */
-	private Integer sort;
-	/**
-	 * $column.comments
-	 */
-	private String img;
+    /**
+     * $column.comments
+     */
+    @TableId
+    private Long id;
+    /**
+     * $column.comments
+     */
+    private String name;
+    /**
+     * $column.comments
+     */
+    private String title;
+    /**
+     * $column.comments
+     */
+    private String subTitle;
+    /**
+     * $column.comments
+     */
+    private Integer status;
+    /**
+     * $column.comments
+     */
+    private String url;
+    /**
+     * $column.comments
+     */
+    private Integer sort;
+    /**
+     * $column.comments
+     */
+    private String img;
 
 }

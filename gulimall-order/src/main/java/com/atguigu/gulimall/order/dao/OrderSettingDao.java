@@ -6,12 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 订单配置信息
- * 
+ *
  * @author yinzg
  * @email yzgjssz@163.com
  * @date 2020-09-02 16:41:33
  */
 @Mapper
 public interface OrderSettingDao extends BaseMapper<OrderSettingEntity> {
-	
+
 }

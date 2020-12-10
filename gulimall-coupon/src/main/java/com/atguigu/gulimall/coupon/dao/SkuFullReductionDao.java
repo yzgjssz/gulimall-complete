@@ -6,12 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 商品满减信息
- * 
+ *
  * @author yinzg
  * @email yzgjssz@163.com
  * @date 2020-09-02 11:16:06
  */
 @Mapper
 public interface SkuFullReductionDao extends BaseMapper<SkuFullReductionEntity> {
-	
+
 }

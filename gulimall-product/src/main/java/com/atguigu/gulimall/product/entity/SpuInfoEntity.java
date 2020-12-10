@@ -6,11 +6,12 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.math.BigDecimal;
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * spu信息
- * 
+ *
  * @author yinzg
  * @email yzgjssz@163.com
  * @date 2020-09-01 12:58:47
@@ -18,44 +19,44 @@ import lombok.Data;
 @Data
 @TableName("pms_spu_info")
 public class SpuInfoEntity implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	/**
-	 * $column.comments
-	 */
-	@TableId
-	private Long id;
-	/**
-	 * $column.comments
-	 */
-	private String spuName;
-	/**
-	 * $column.comments
-	 */
-	private String spuDescription;
-	/**
-	 * $column.comments
-	 */
-	private Long catalogId;
-	/**
-	 * $column.comments
-	 */
-	private Long brandId;
-	/**
-	 * $column.comments
-	 */
-	private BigDecimal weight;
-	/**
-	 * $column.comments
-	 */
-	private Integer publishStatus;
-	/**
-	 * $column.comments
-	 */
-	private Date createTime;
-	/**
-	 * $column.comments
-	 */
-	private Date updateTime;
+    /**
+     * $column.comments
+     */
+    @TableId
+    private Long id;
+    /**
+     * $column.comments
+     */
+    private String spuName;
+    /**
+     * $column.comments
+     */
+    private String spuDescription;
+    /**
+     * $column.comments
+     */
+    private Long catalogId;
+    /**
+     * $column.comments
+     */
+    private Long brandId;
+    /**
+     * $column.comments
+     */
+    private BigDecimal weight;
+    /**
+     * $column.comments
+     */
+    private Integer publishStatus;
+    /**
+     * $column.comments
+     */
+    private Date createTime;
+    /**
+     * $column.comments
+     */
+    private Date updateTime;
 
 }

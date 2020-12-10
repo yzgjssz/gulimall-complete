@@ -6,7 +6,7 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         namespace: 09a46c24-189d-4227-be0f-200f08eacbb1
-#        namespace: fb6b13a7-ca7f-4f5b-8bae-1f60ce46649d
+        #        namespace: fb6b13a7-ca7f-4f5b-8bae-1f60ce46649d
         ext-config:
           - data-id: gulimall-gateway.yml
             group: dev

@@ -5,11 +5,12 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * 属性分组
- * 
+ *
  * @author yinzg
  * @email yzgjssz@163.com
  * @date 2020-09-01 12:58:47
@@ -17,32 +18,32 @@ import lombok.Data;
 @Data
 @TableName("pms_attr_group")
 public class AttrGroupEntity implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	/**
-	 * $column.comments
-	 */
-	@TableId
-	private Long attrGroupId;
-	/**
-	 * $column.comments
-	 */
-	private String attrGroupName;
-	/**
-	 * $column.comments
-	 */
-	private Integer sort;
-	/**
-	 * $column.comments
-	 */
-	private String descript;
-	/**
-	 * $column.comments
-	 */
-	private String icon;
-	/**
-	 * $column.comments
-	 */
-	private Long catelogId;
+    /**
+     * $column.comments
+     */
+    @TableId
+    private Long attrGroupId;
+    /**
+     * $column.comments
+     */
+    private String attrGroupName;
+    /**
+     * $column.comments
+     */
+    private Integer sort;
+    /**
+     * $column.comments
+     */
+    private String descript;
+    /**
+     * $column.comments
+     */
+    private String icon;
+    /**
+     * $column.comments
+     */
+    private Long catelogId;
 
 }

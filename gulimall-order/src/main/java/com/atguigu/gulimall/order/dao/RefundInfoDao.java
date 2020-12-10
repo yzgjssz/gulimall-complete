@@ -6,12 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 退款信息
- * 
+ *
  * @author yinzg
  * @email yzgjssz@163.com
  * @date 2020-09-02 16:41:32
  */
 @Mapper
 public interface RefundInfoDao extends BaseMapper<RefundInfoEntity> {
-	
+
 }
